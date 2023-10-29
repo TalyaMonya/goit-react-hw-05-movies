@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import toast from "react-hot-toast";
 import { useParams } from "react-router-dom";
 import { fetchMovieCast } from "servises/api";
 import { CastHeader, CastInfo, CastList, CastListItem, CastName, NoCastText, Wrapper } from "./Cast.styled";
