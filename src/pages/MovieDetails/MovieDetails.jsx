@@ -1,5 +1,4 @@
 import { Suspense, useEffect, useState } from "react";
-import toast from "react-hot-toast";
 import { Outlet, useLocation, useParams, Link } from "react-router-dom";
 import { fetchMovieById } from "servises/api";
 import { ButtonBack, Container } from "./MovieDetails.styled";
@@ -19,7 +18,7 @@ const MovieDetails = () => {
                 const movieData = await fetchMovieById(movieId);
                 setSelectedMovie(movieData);
             } catch (error) {
-                toast.error('Error')
+                console.log(error);
             }
         };
 
@@ -29,7 +28,7 @@ const MovieDetails = () => {
     return (
         <main>
             <Container>
-                <Link to={location?.state?.from ?? '/'}>
+                <Link to={location?.state.from ?? '/'}>
                     <ButtonBack type="button">
                         <AiOutlineArrowLeft
                             style={{ width: '25px', height: '25px', display: 'inline-block' }} />
