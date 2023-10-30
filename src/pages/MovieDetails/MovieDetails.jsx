@@ -28,7 +28,7 @@ const MovieDetails = () => {
     return (
         <main>
             <Container>
-                <Link to={location?.state.from ?? '/'}>
+                <Link to={location?.state?.from ?? '/'}>
                     <ButtonBack type="button">
                         <AiOutlineArrowLeft
                             style={{ width: '25px', height: '25px', display: 'inline-block' }} />

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { useLocation, useSearchParams } from "react-router-dom";
 import { toast } from "react-hot-toast";
+import { useLocation, useSearchParams } from "react-router-dom";
 import { fetchMovieByName } from "servises/api";
 import SearchMovies from "components/SearchMovies/SearchMovies";
 import { Section, SectionTitle, List, ListItem, StyledLink } from "components/MovieList/MovieList.styled";
